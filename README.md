@@ -33,7 +33,7 @@ import FullscreenDialog from 'material-ui-fullscreen-dialog'
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | actionButton | `node` | | A `FlatButton` or `IconButton` that is used as affirmative action button. |
-| appBarStyle | `object` | | Overrides the inline-styles of the app bar. | 
+| appBarStyle | `object` | | Overrides the inline-styles of the app bar. |
 | appBarZDepth | `number` | 1 | Overrides the z-depth of the app bar, will affect its shadow. This is ignored if immersive is set to `true`. |
 | children | `node` | | Children elements. |
 | closeIcon | `node` | Close icon | Icon element used for the dismissive action. This is hidden if `onRequestClose` is not set. |
@@ -44,6 +44,7 @@ import FullscreenDialog from 'material-ui-fullscreen-dialog'
 | style | `object` | | Overrides the inline-styles of the dialog's root element. |
 | title | `string` | | The title of the dialog. |
 | titleStyle | `object` | | Overrides the inline-styles of the app bar's title element. |
+| bodyClassName | `string` | | The className to add to the content's root element under the title. |
 
 \* required property
 

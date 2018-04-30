@@ -44,7 +44,8 @@ export default function FullscreenDialog (props, { muiTheme }) {
     open,
     style,
     title,
-    titleStyle
+    titleStyle,
+    bodyClassName
   } = props
 
   return (
@@ -65,7 +66,7 @@ export default function FullscreenDialog (props, { muiTheme }) {
         showMenuIconButton={onRequestClose != null}
         zDepth={immersive ? 0 : appBarZDepth}
       />
-      <div style={{ ...styles.container, ...containerStyle }}>
+      <div style={{ ...styles.container, ...containerStyle }} className={bodyClassName}>
         {children}
       </div>
     </FullscreenDialogFrame>
@@ -120,7 +121,11 @@ FullscreenDialog.propTypes = {
   /**
    * Overrides the inline-styles of the app bar's title element.
    */
-  titleStyle: PropTypes.object
+  titleStyle: PropTypes.object,
+  /**
+   * The className to add to the content's root element under the title.
+   */
+  bodyClassName: PropTypes.string,
 }
 
 FullscreenDialog.defaultProps = {
